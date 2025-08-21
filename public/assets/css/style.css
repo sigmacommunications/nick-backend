@@ -1,0 +1,777 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    margin: 0;
+}
+
+/*Sign Up Page Css*/
+.content h2 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+.form-row input {
+    height: 50px;
+    border-radius: 50px;
+    padding-left: 15px;
+    font-family: 'Montserrat';
+    width: 100%;
+    border: 0;
+    font-size: 16px;
+}
+
+.form-row input:focus {
+    outline: 0 !important;
+}
+
+.content p {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.52px;
+    margin: 0;
+}
+
+.form-container form {
+    margin-top: 20px;
+}
+
+.form-container {
+    background: transparent linear-gradient(90deg, #E8DE7A 0%, #F79C00 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Montserrat';
+}
+
+.form-container .container {
+    width: 480px;
+    padding: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 5px;
+}
+
+.form-row input::placeholder {
+    color: #00000085;
+}
+
+.form-btn {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.extra-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+}
+
+.extra-options label {
+    color: white;
+}
+
+.extra-options a {
+    text-decoration: none;
+    color: white;
+}
+
+.signup-btn {
+    width: 210px;
+    height: 60px;
+    font-size: 18px;
+    background-color: white;
+    color: #F79C00;
+    cursor: pointer;
+    border: 0;
+    border-radius: 35px;
+    margin: 0px auto;
+    font-family: 'Montserrat';
+    letter-spacing: -0.88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    text-align: center;
+    color: white;
+}
+
+.text a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.div-logo img {
+    width: 60%;
+}
+
+.div-logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/*Sign Up Page Css*/
+
+/*Dashboard Page Css*/
+.sidebar {
+    background: transparent radial-gradient(closest-side at 50% 50%, #E8DE7A 0%, #F79C00 100%);
+    border-radius: 0px 94px 94px 0px;
+    height: 100vh;
+    padding: 50px 30px;
+    font-family: 'Montserrat' !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-links2 {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.sidebar-h3 {
+    font-size: 14px;
+    letter-spacing: 0.65px;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+.sidebar-logo {
+    width: 75%;
+    margin-bottom: 50px;
+}
+
+.sidebar-links a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar-links {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.sidebar-links2 a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar-links2 a:hover {
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.sidebar-links1 a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    border-radius: 26px;
+}
+
+.sidebar-links1 {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.sidebar-links1 a:hover {
+    background: #fff;
+    color: #3670EE;
+    transition: 0.3s;
+}
+
+.sidebar-links a:hover,
+.sidebar-links a.active {
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.main1-a {
+    font-size: 30px;
+    font-weight: 700;
+    color: #26283C;
+}
+
+.main-div {
+    font-family: 'Montserrat';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 0 10px;
+    margin: 0;
+}
+
+.main1-b {
+    font-size: 16px;
+    color: #7D7D7D;
+    font-weight: 400;
+}
+
+.search-box {
+    background: #F9F9FB;
+    border-radius: 50px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    margin: 20px 0;
+}
+
+.search-box .form-control {
+    padding: 0;
+}
+
+#button-addon2 {
+    color: #ABB1C9 !important;
+}
+
+.search-box .form-control::placeholder {
+    outline: 0 !important;
+}
+
+.schedule-btn {
+    width: 160px;
+    height: 56px;
+    background: #f79c00;
+    border-radius: 33px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.center1a {
+    font: 900 78px/86px Montserrat;
+    color: #000;
+}
+
+.center1b {
+    font: 400 10px/14px Montserrat;
+    color: #000;
+    margin: 0;
+}
+
+.center-main1-inner {
+    background: transparent linear-gradient(180deg, #E8DE7A38 0%, #F79C0052 100%) 0% 0% no-repeat padding-box;
+    border: 1px solid #F79C00;
+    border-radius: 19px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.rightbar .notice_box {
+    position: relative;
+}
+
+.rightbar .notice_box .bubble_count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    color: #fff;
+    font-size: 8px;
+    background: #3670EE;
+    border-radius: 5px;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightbar {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+    padding: 25px 10px;
+    margin-right: 20px;
+}
+
+.rightbar i {
+    color: #7A86A1;
+}
+
+.admin-img {
+    box-shadow: 0px 0px 26px #00000070;
+    border: 1px solid #3670EE;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.rigt1-a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #080B23;
+    text-decoration: none;
+}
+
+.rigt1-b {
+    font-size: 12px;
+    font-weight: 300;
+    color: #A8A8A8;
+    margin: 0;
+}
+
+.rightbar-inner img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.right-arrow i {
+    color: #00000082;
+    border: 1px solid #00000080;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-arrow {
+    text-decoration: none;
+}
+
+.rightbar-inner {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rightbar-hover {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 1000px;
+    margin: 0 20px 0px 20px;
+}
+
+.rightbar-hover:hover {
+    box-shadow: 0px 3px 6px #00000029;
+    transition: 0.3s;
+}
+
+.righbar-below {
+    height: 500px;
+    overflow-y: auto;
+}
+
+.righbar-below::-webkit-scrollbar,
+.table-main::-webkit-scrollbar {
+    width: 5px;
+}
+
+.righbar-below::-webkit-scrollbar-track,
+.table-main::-webkit-scrollbar-track {
+    background: #232e3326;
+    border-radius: 3px;
+}
+
+.righbar-below::-webkit-scrollbar-thumb,
+.table-main::-webkit-scrollbar-thumb {
+    background: #3670ee;
+    border-radius: 3px;
+}
+
+.table-main {
+    height: 200px;
+    overflow: auto;
+}
+
+.admin {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.center-main1-innera .accordion-button {
+    background: transparent;
+    font: 400 14px / 14px Montserrat;
+}
+
+.center-main1-innera .accordion-button:not(.collapsed) {
+    background: transparent;
+    box-shadow: inset 0 calc(-1 * 1px) 0 #F79C0063;
+    color: #000;
+}
+
+.center-main1-innera .accordion-item {
+    border: 1px solid #F79C0063;
+}
+
+.center-main1-innera .accordion-body {
+    font: 400 13px / 24px Montserrat;
+}
+
+.center-main1-innera .accordion-button:not(.collapsed)::after {
+    filter: invert(1);
+}
+
+/*Switch*/
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.center-main2 {
+    display: none;
+    margin-top: 20px;
+}
+
+.monthly {
+    font: 600 16px / 14px Montserrat;
+    color: #000;
+    margin: 0;
+}
+
+.monthly1 {
+    font: 400 16px / 14px Montserrat;
+    color: #000;
+    margin: 0;
+}
+
+.text-div {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.center-main1 {
+    margin-top: 20px;
+}
+
+/*Switch*/
+
+/*Dashboard Page Css*/
+
+/*Profile Setup Page Css*/
+.profile1 {
+    background: transparent linear-gradient(90deg, #E8DE7A 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;
+    border-radius: 1000px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+.profile1-a {
+    font: 700 26px / 26px Montserrat;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.profile1-b {
+    font: 400 14px / 18px Montserrat;
+    color: #000;
+    width: 55%;
+    margin: 0;
+}
+
+.profile2 a {
+    font: 400 20px / 20px Montserrat;
+    color: #000;
+    text-decoration: none;
+    letter-spacing: -0.46px;
+    border-bottom: 2px solid #0000003d;
+    padding: 20px 0;
+    display: block;
+}
+
+.profile2 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.profile2 {
+    margin: 10px 0 0 10px;
+    width: 50%;
+}
+
+/*Profile Setup Page Css*/
+
+/*Preferences Page Css*/
+.new {
+    padding: 0;
+    height: calc(58vh - 45px);
+    overflow-y: auto;
+}
+
+.new .form-group {
+    display: flex;
+    margin-bottom: 15px;
+    flex-direction: row-reverse;
+    border: 1px solid #7070701A;
+    border-radius: 34px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.new .form-group input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.new .form-group label {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font: 400 16px / 14px Montserrat;
+    color: #000;
+}
+
+.new .form-group label:before {
+    content: '';
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid #F79C00;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+	border-radius: 50%;
+}
+
+.new .form-group input:checked+label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    width: 6px;
+    height: 12px;
+    border: solid #F79C00;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.icon-img {
+    width: 20px;
+    height: 20px;
+    background: transparent radial-gradient(closest-side at 50% 50%, #E8DE7A 0%, #F79C00 100%) 0% 0% no-repeat padding-box;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.new .form-group:hover {
+    box-shadow: 0px 5px 10px #00000024;
+    transition: 0.3s;
+}
+
+.new::-webkit-scrollbar {
+    width: 4px;
+}
+
+.new::-webkit-scrollbar-track {
+    background: #25252545;
+    border-radius: 3px;
+}
+
+.new::-webkit-scrollbar-thumb {
+    background: #F79C00;
+    border-radius: 3px;
+}
+
+.pref1-a {
+    font: 900 24px / 20px Montserrat;
+    color: #000;
+}
+
+.pref1-b {
+    font: 400 11px / 16px Montserrat;
+}
+
+.notepad {
+    width: 100%;
+    height: 59vh;
+    border: 0;
+    background: url(../images/preferences/notepad.png);
+    background-size: cover;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    padding-left: 65px;
+    padding-top: 24px;
+    line-height: 40px;
+    padding-right: 32px;
+    overflow: hidden;
+}
+
+.notepad:focus {
+    outline: 0;
+}
+
+.submit-btn {
+    width: 225px;
+    height: 55px;
+    background: transparent linear-gradient(180deg, #F79C00 0%, #F79C00 100%) 0% 0% no-repeat padding-box;
+    border-radius: 32px;
+    border: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.notes {
+    box-shadow: 0px 16px 32px #0000000F;
+    border-radius: 13px;
+    padding: 10px 20px 20px;
+}
+
+/*Preferences Page Css*/
+
+@media only screen and (max-width: 767px) {
+    .form-container .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .content h2 {
+        font-size: 26px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .form-row input {
+        height: 55px;
+        font-size: 14px;
+    }
+
+    .signup-btn {
+        width: 180px;
+        height: 55px;
+        font-size: 15px;
+    }
+}
