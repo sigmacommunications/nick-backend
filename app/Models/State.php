@@ -5,23 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class City extends Model
+class State extends Model
 {
     use HasFactory;
-    protected $guarded = [];
 
     public function country()
     {
         return $this->belongsTo(Country::class);
     }
 
-    public function state()
+    public function cities()
     {
-        return $this->belongsTo(State::class);
-    }
-	
-	public function places()
-    {
-        return $this->hasMany(Place::class,'city','name');
+        return $this->hasMany(City::class);
     }
 }

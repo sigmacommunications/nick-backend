@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\RegisterController;
 use App\Http\Controllers\API\CountryController;
 use App\Http\Controllers\API\CityController;
+use App\Http\Controllers\API\StateController;
 use App\Http\Controllers\API\HomeController;
 use App\Http\Controllers\API\ForgotPasswordController;
 use App\Http\Controllers\API\CodeCheckController;
@@ -54,6 +55,7 @@ Route::get('location', [homeController::class, 'location']);
 	Route::post('notes/{id}', [homeController::class, 'NotesUpdate']);
     Route::resource('countries', CountryController::class);
 	Route::resource('cities', CityController::class);
+	Route::resource('states', StateController::class);
 		
     Route::post('trip', [homeController::class, 'Trip']);
 	Route::post('trip_delete', [homeController::class, 'TripDelete']);
