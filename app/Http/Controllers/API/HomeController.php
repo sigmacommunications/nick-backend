@@ -504,13 +504,13 @@ $response = [
          }
      }
 	
-	public function TripDelete()
+	public function TripDelete($id)
 	{
-			$country = Country::where('name',$request->country)->where('user_id',Auth::id())->first();
-			$cities = City::where('country_id',$country->id)->delete();
-			$country->delete();
+//			$country = Country::where('name',$request->country)->where('user_id',Auth::id())->first();
+//			$cities = City::where('country_id',$country->id)->delete();
+//			$country->delete();
 			
-            $places = Place::where('country',$request->country)->where('user_id',Auth::id())->delete();
+            $places = Place::where('id',$id)->where('user_id',Auth::id())->delete();
 
             return response()->json(['success'=>true,'message'=>'Trip Delete Successfully']);
 		
