@@ -12,6 +12,7 @@ use App\Models\PlaceTrip;
 use App\Models\Receptionist;
 use App\Models\Image;
 use App\Models\Document;
+use App\Models\State;
 use App\Models\Signature;
 use App\Models\Notes;
 use App\Models\Place;
