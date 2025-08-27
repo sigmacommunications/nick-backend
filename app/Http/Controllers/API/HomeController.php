@@ -366,7 +366,7 @@ $response = [
             $trip->lat = $request->lat;
             $trip->lng = $request->lng;
             $trip->country = $request->country_name;
-            $trip->state = $request->state_name;   // ✅ State add kiya
+            $trip->state = $request->state_name; 
             $trip->city = $request->city_name;
             $trip->flag = $request->flag;
             $trip->image = $request->image;
@@ -402,6 +402,7 @@ $response = [
 
                 if (!$city) {
                     City::create([
+                        'country_id' => $country->id,
                         'state_id' => $state->id,
                         'name'     => $request->city_name,
                         'image'    => $request->city_image,
@@ -423,6 +424,7 @@ $response = [
 
                 // City create
                 City::create([
+                    'country_id' => $country->id,
                     'state_id' => $state->id,
                     'name'     => $request->city_name,
                     'image'    => $request->city_image,
