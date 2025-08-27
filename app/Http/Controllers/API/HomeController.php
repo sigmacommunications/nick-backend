@@ -355,9 +355,8 @@ $response = [
 	
 	public function trip_notes(Request $request)
     {
-	    try
-        {
-
+        try {
+            // Trip Save
             $trip = new Place();
             $trip->title = $request->title;
             $trip->user_id = Auth::id();
@@ -366,50 +365,75 @@ $response = [
             $trip->lat = $request->lat;
             $trip->lng = $request->lng;
             $trip->country = $request->country_name;
+            $trip->state = $request->state_name;   // ✅ State add kiya
             $trip->city = $request->city_name;
             $trip->flag = $request->flag;
             $trip->image = $request->image;
             $trip->save();
 
+            // Notes Save
             $storage = new Notes();
             $storage->title = $request->title;
             $storage->place_id = $trip->id;
             $storage->description = $request->description;
             $storage->save();
-			
-			$country = Country::where('name', 'like', '%' . $request->country_name . '%')->first();
-			if($country)
-			{	
-				$city = City::where('country_id',$country->id)->where('name', 'like', '%' . $request->city_name . '%')->first();
-				if(!$city)
-				{
-					City::create([
-						'country_id' => $country->id,  
-						'name' => $request->city_name,  
-						'image' => $request->city_image,  
-					]);
-				}
-			}
-			else
-			{
-				$countrys = Country::create([
-				  'user_id' => Auth::id(),
-				  'name' => $request->country_name,  
-				  'uri' => $request->country_uri,  
-				]);
-				
-				City::create([
-					'country_id' => $countrys->id,  
-					'name' => $request->city_name,  
-					'image' => $request->city_image,  
-				]);
-			}
 
-            return response()->json(['success'=>true,'message'=>'Trip Notes Create Successfully']);
-        }
-        catch(\Exception $e)
-        {
-                return $this->sendError($e->getMessage());
+            // Country check
+            $country = Country::where('name', 'like', '%' . $request->country_name . '%')->first();
+
+            if ($country) {
+                // State check
+                $state = State::where('country_id', $country->id)
+                            ->where('name', 'like', '%' . $request->state_name . '%')
+                            ->first();
+
+                if (!$state) {
+                    $state = State::create([
+                        'country_id' => $country->id,
+                        'name'       => $request->state_name,
+                    ]);
+                }
+
+                // City check
+                $city = City::where('state_id', $state->id)
+                            ->where('name', 'like', '%' . $request->city_name . '%')
+                            ->first();
+
+                if (!$city) {
+                    City::create([
+                        'state_id' => $state->id,
+                        'name'     => $request->city_name,
+                        'image'    => $request->city_image,
+                    ]);
+                }
+            } else {
+                // Country create
+                $countrys = Country::create([
+                    'user_id' => Auth::id(),
+                    'name'    => $request->country_name,
+                    'uri'     => $request->country_uri,
+                ]);
+
+                // State create
+                $state = State::create([
+                    'country_id' => $countrys->id,
+                    'name'       => $request->state_name,
+                ]);
+
+                // City create
+                City::create([
+                    'state_id' => $state->id,
+                    'name'     => $request->city_name,
+                    'image'    => $request->city_image,
+                ]);
+            }
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Trip Notes Created Successfully'
+            ]);
+        } catch (\Exception $e) {
+            return $this->sendError($e->getMessage());
         }
     }
      // Update Notes
