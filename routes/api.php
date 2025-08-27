@@ -61,6 +61,8 @@ Route::get('location', [homeController::class, 'location']);
 	Route::post('trip_delete', [homeController::class, 'TripDelete']);
     //list    
     Route::get('notes/index', [homeController::class, 'NotesIndex']);
+	Route::delete('notes/{id}', [NotesController::class, 'NotesDelete']);
+
     Route::get('trip/index/{user_id}', [homeController::class, 'TripIndex']);
 	Route::post('preferences', [homeController::class, 'Preferences']);
     

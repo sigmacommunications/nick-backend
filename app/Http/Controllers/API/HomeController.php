@@ -510,6 +510,30 @@ $response = [
         }
     }
 
+    public function NotesDelete(Request $request, $id)
+    {
+        try {
+            $note = Notes::find($id);
+
+            if (!$note) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Note not found'
+                ], 404);
+            }
+
+            $note->delete();
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Note deleted successfully'
+            ]);
+        } catch (\Exception $e) {
+            return $this->sendError($e->getMessage());
+        }
+    }
+
+
     public function TripIndex(Request $request,$user_id)
 	{
 		try{
