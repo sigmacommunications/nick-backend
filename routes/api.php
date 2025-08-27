@@ -58,7 +58,7 @@ Route::get('location', [homeController::class, 'location']);
 	Route::resource('states', StateController::class);
 		
     Route::post('trip', [homeController::class, 'Trip']);
-	Route::post('trip_delete', [homeController::class, 'TripDelete']);
+	Route::post('trip_delete/{ID}', [homeController::class, 'TripDelete']);
     //list    
     Route::get('notes/index', [homeController::class, 'NotesIndex']);
 	Route::delete('notes/{id}', [NotesController::class, 'NotesDelete']);
