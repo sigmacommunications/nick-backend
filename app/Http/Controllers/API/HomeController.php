@@ -380,7 +380,7 @@ $response = [
             $storage->save();
 
             // Country check
-            $country = Country::where('name', 'like', '%' . $request->country_name . '%')->first();
+            $country = Country::where('name', 'like', '%' . $request->country_name . '%')->where('user_id',Auth::id())->first();
 
             if ($country) {
                 // State check
