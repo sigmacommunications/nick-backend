@@ -510,7 +510,7 @@ $response = [
 	public function TripDelete($id)
 	{
         $place = Place::where('id',$id)->where('user_id',Auth::id())->first();
-		$country = Country::where('name',$$place->country)->where('user_id',Auth::id())->first();
+		$country = Country::where('name',$place->country)->where('user_id',Auth::id())->first();
 		// $cities = State::where('country_id',$country->id)->delete();
 		// $cities = City::where('country_id',$country->id)->delete();
 //			$country->delete();
